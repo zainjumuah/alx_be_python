@@ -1,0 +1,5 @@
+number = (int)(input("Enter a number to see its multiplication table: "))
+
+# Looping from 1 through to 10'
+for i in range(1, 11, 1):
+    print(f"{number} * {i} = {number * i}")
