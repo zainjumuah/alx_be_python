@@ -1,7 +1,7 @@
 # Get user input
 user_input1 = input("Enter the first number: ")
 user_input2 = input("Enter the second number: ")
-user_op_type = input("Choose the operation (+, -, *, /): ")
+operation = input("Choose the operation (+, -, *, /): ")
 
 #Tryna catch some sneaky errors here
 try:
@@ -12,7 +12,7 @@ except ValueError:
     exit()
 
 # Match-Case statement that performs the ops based on the string input    
-match user_op_type:
+match operation:
     case '+':
         op_result = num1 + num2
     case '-':
@@ -25,4 +25,4 @@ match user_op_type:
     case _:
         op_result = "Invalid operation, carry your matter dey go abeggiiii"
 
-print(f"The result is {op_result}" if num2 != 0 and user_op_type == '/' else "Cannot divide by zero.")
+print(f"The result is {op_result}" if num2 != 0 and operation == '/' else "Cannot divide by zero.")
